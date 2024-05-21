@@ -12,10 +12,10 @@ jobs:
         include:
           - elixir: 1.15.6
             otp: 24.3.4.13
-            blend: postgres_0_16
+            blend: postgrex_0_16
           - elixir: 1.15.6
             otp: 24.3.4.13
-            blend: postgres_0_17
+            blend: postgrex_0_17
           - elixir: 1.15.6
             otp: 26.1.2
             lint: lint
