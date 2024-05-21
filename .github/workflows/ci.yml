@@ -12,6 +12,10 @@ jobs:
         include:
           - elixir: 1.15.6
             otp: 24.3.4.13
+            blend: postgres_0_16
+          - elixir: 1.15.6
+            otp: 24.3.4.13
+            blend: postgres_0_17
           - elixir: 1.15.6
             otp: 26.1.2
             lint: lint
@@ -32,6 +36,8 @@ jobs:
           key: ${{ runner.os }}-${{ matrix.elixir }}-${{ matrix.otp }}-${{ hashFiles('**/mix.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ matrix.elixir }}-${{ matrix.otp }}-
+      - run: cp blend/${{matrix.blend}}.mix.lock mix.lock
+        if: matrix.blend
       - name: Install dependencies
         run: mix deps.get
       - name: Check unused dependencies

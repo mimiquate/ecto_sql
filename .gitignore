@@ -4,3 +4,6 @@
 /doc
 /tmp
 erl_crash.dump
+
+/blend/_build
+/blend/deps
