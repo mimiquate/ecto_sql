@@ -67,6 +67,9 @@ defmodule EctoSQL.MixProject do
       # Docs
       {:ex_doc, "~> 0.21", only: :docs},
 
+      # Dev
+      {:blend, "~> 0.3.0", only: :dev},
+
       # Benchmarks
       {:benchee, "~> 1.0", only: :bench}
     ]
